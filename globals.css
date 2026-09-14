@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #E8E0CC;
+  color: #1E1B16;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.ledger-rule {
+  background-image: repeating-linear-gradient(
+    to right,
+    #C7BC9C 0,
+    #C7BC9C 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  height: 1px;
+}
+
+.slider-thumb {
+  height: 2px;
+  background: #C7BC9C;
+}
+
+.slider-thumb::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 0;
+  background: #7A3527;
+  border: 2px solid #F1ECDE;
+  cursor: ew-resize;
+  margin-top: -8px;
+}
+
+.slider-thumb::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 0;
+  background: #7A3527;
+  border: 2px solid #F1ECDE;
+  cursor: ew-resize;
+}
+
+.slider-thumb::-webkit-slider-runnable-track {
+  height: 2px;
+  background: #C7BC9C;
+}
+
+.slider-thumb::-moz-range-track {
+  height: 2px;
+  background: #C7BC9C;
+}
+
+::selection {
+  background: #9C7A3C;
+  color: #F1ECDE;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #7A3527;
+  outline-offset: 3px;
+}
